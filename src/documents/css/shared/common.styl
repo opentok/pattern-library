@@ -1,0 +1,236 @@
+@import "shared_constants"
+@import "mixins"
+
+.hidden
+  display none
+
+.inline-block
+  display inline-block !important
+
+.block
+  display block !important
+
+.clear
+  &:after
+    content ""
+    display block
+    clear both
+
+//backgrounds
+.bg-tb-blue
+   background-color tb_blue !important
+
+.btn,.btn-padding
+  font-family font_avant_book
+  display inline-block
+  border-radius 0px
+  text-align center
+  line-height 50px
+  tb_transition()
+  font-size 16px
+  height 50px
+  border 0
+  &:hover
+    text-decoration none
+    cursor pointer
+
+.btn-padding
+  padding 0 20px
+
+.btn-bold
+  font-family font_avant_medium
+
+
+.btn-blue
+  tb_btn_init(
+    tb_blue,
+    tb_blue,
+    tb_medium_blue,
+    white
+  )
+.btn-ghost-blue
+  tb_btn_init(
+    white,
+    tb_blue,
+    white,
+    tb_blue 
+  )
+.btn-ghost-white
+  tb_btn_init(
+    transparent,
+    white,
+    transparent,
+    white
+  )
+.btn-clear-dark
+  tb_btn_init(
+    transparent,
+    transparent,
+    transparent,
+    dark_gray)
+.btn-clear-blue
+  tb_btn_init(
+    transparent,
+    transparent,
+    transparent,
+    tb_blue)
+
+.btn-clear-light
+  tb_btn_init(
+    transparent,
+    transparent,
+    transparent,
+    white)
+
+.ctaarrow-white
+  btn_ctaarrow(
+    ctaarrow_white_2x,
+    btn_icon_offset)
+
+.ctaarrow-blue
+  btn_ctaarrow(
+    ctaarrow_blue_2x,
+    btn_icon_offset)
+.ctaarrow-gray
+  btn_ctaarrow(
+    ctaarrow_gray_2x,
+    btn_icon_offset)
+
+.ctaarrow-gray-left
+  btn_ctaarrow_left(
+    ctaarrow_gray_left_2x,
+    btn_icon_offset)
+
+.ctaarrow-letter-white
+  btn_custom(
+    ctaarrow_letter_white_2x,
+    btn_icon_offset, 32,22 )
+
+.ctaarrow-letter-blue
+  btn_custom(
+    ctaarrow_letter_blue_2x,
+    btn_icon_offset, 32, 22)
+.ctaarrow-play-blue
+  btn_custom(
+    ctaarrow_play_blue_filled_2x,
+    btn_icon_offset, 32, 32
+  )
+
+//icons
+.icon-ref-doc-blue
+  tb_icon(28px,28px,8px,
+    icon_ref_doc_blue_2x)
+.icon-guides-blue
+  tb_icon(28px,28px,10px,
+    icon_guides_blue_2x)
+.icon-guides-gray
+  tb_icon(28px,28px,5px,
+    icon_guides_gray_2x)
+.icon-components-blue
+  tb_icon(28px,28px,10px,
+    icon_components_blue_2x)
+
+.icon-components-gray
+  tb_icon(28px,28px,3px,
+    icon_components_gray_2x)
+.icon-starter-kits-blue
+  tb_icon(28px,28px,8px,
+    icon_starter_kits_blue_2x)
+
+.icon-starter-kits-gray
+  tb_icon(28px,28px,3px,
+    icon_starter_kits_gray_2x)
+
+.icon-screen-sharing-blue
+  tb_icon(28px,28px,5px,
+    icon_screen_sharing_blue_2x)
+.icon-voice-only-blue
+  tb_icon(21px,28px,8px,
+    icon_voice_only_blue_2x)
+.icon-debugging-blue
+  tb_icon(28px,28px,8px,
+    icon_debugging_blue_2x)
+.icon-service-kit-blue
+  tb_icon(29px,32px,8px,
+    icon_service_kit_blue_2x)
+
+.icon-schedule-kit-blue
+  tb_icon(32px,32px,10px,
+    icon_schedule_kit_blue_2x)
+
+.icon-presence-kit-blue
+  tb_icon(32px,32px,10px,
+    icon_presence_kit_blue_2x)
+
+.icon-hardware-setup-blue
+  tb_icon(28px,32px,10px,
+    icon_hardware_setup_blue_2x)
+
+.icon-layout-container-blue
+  tb_icon(25px,27px,10px,
+    icon_layout_container_blue_2x)
+
+.icon-cordova-integration-blue
+  tb_icon(32px,31px,10px,
+    icon_cordova_integration_blue_2x)
+
+.ribon
+  background tb_blue
+  text-align center
+  padding 25px
+  line-height 36px
+  span
+    font-family font_avant_book
+    color white
+    font-size 20px
+  a 
+    width 250px
+
+
+// sections
+.section-header
+  background-size 1277px 372px
+  background-image dots_bg
+  padding 30px 0
+  text-align center
+  border-bottom 2px solid tb_blue
+  .container
+    padding 0 !important
+  strong,p
+    font-size 20px
+    line-height 36px
+    color state_gray
+  strong 
+    font-family font_avant_medium 
+  p
+    font-family font_avant
+
+// tabs
+.tabs
+  margin-top -30px
+  .tab:not(:last-child) a
+    border-right 2px solid white 
+    margin-left -2px
+  &:after
+    content ""
+    display block
+    clear both
+  .tab
+    display block
+    list-style none
+    margin 0
+    float left
+    overflow hidden
+    a
+      background-color cream
+      display block
+      width 100%
+      text-align center
+      padding 10px 0
+    
+.three-tabs .tab
+  width (100/3)%
+.six-tabs .tab
+  width (100/6)%
+
+

@@ -1,0 +1,318 @@
+@import "shared_constants"
+
+mh_speed = 0.7s;
+dark_gray = #181818;  
+medium_gray = #303031;
+fadded_white = rgba(255,255,255,0.3);
+
+// icons
+arrow_up_icon_2x = url(img_dir + "icons/nav-arrow_up@2x.png");
+arrow_down_icon_2x = url(img_dir + "icons/nav-arrow_down@2x.png");
+
+video_icon_2x = url(img_dir + "icons/nav-platform-video@2x.png");
+voice_icon_2x = url(img_dir + "icons/nav-platform-voice@2x.png");
+messaging_icon_2x = url(img_dir + "icons/nav-platform-messaging@2x.png");
+screensharing_icon_2x = url(img_dir + "icons/nav-platform-screensharing@2x.png");
+archiving_icon_2x = url(img_dir + "icons/nav-platform-archiving@2x.png");
+ios_android_icon_2x = url(img_dir + "icons/nav-platform-ios_android@2x.png");
+audio_fallback_icon_2x = url(img_dir + "icons/nav-platform-audio_fallback@2x.png");
+drivers_icon_2x = url(img_dir + "icons/nav-platform-audio_video_drivers@2x.png");
+firewall_icon_2x = url(img_dir + "icons/nav-platform-firewall_traversal@2x.png");
+ie_plugin_icon_2x = url(img_dir + "icons/nav-platform-ie_plugin@2x.png");
+multiparty_icon_2x = url(img_dir + "icons/nav-platform-multiparty@2x.png");
+security_icon_2x = url(img_dir + "icons/nav-platform-security@2x.png");
+chat_icon_2x = url(img_dir + "icons/nav-platform-text_chat@2x.png");
+
+
+page_transition()
+  -o-transition all 0.5s ease-out
+  -webkit-transition all 0.5s ease-out
+  -moz-transition all 0.5s ease-out
+  -ms-transition all 0.5s ease-out 
+  -kthtml-transition all 0.5s ease-out 
+  transition all 0.5s ease-out
+
+mh_transition(t1,t2)
+  -o-transition max-height t1 ease-out, opacity t2 ease-out 
+  -webkit-transition max-height t1 ease-out, opacity t2 ease-out
+  -moz-transition max-height t1 ease-out, opacity t2 ease-out
+  -ms-transition max-height t1 ease-out, opacity t2 ease-out 
+  -kthtml-transition max-height t1 ease-out, opacity t2 ease-out 
+  transition max-height t1 ease-out, opacity t2 ease-out
+
+nav_icon(w,h,url)
+  background-image url 
+  background-repeat no-repeat
+  background-size w h 
+  background-position center left
+
+nav_h = 60;
+.pink
+  background-color pink
+.show
+  max-height 500px !important
+  opacity 1 !important
+#main-nav
+  position fixed
+  top 0
+  left 0
+  right 0 
+  z-index 101
+  color white
+  a
+    font-size 14px
+    font-family font_avant_book
+    color white
+    text-decoration none
+    line-height 30px
+
+
+  .top
+    background-color dark_gray
+    height 40px
+    line-height 40px
+    .login-links
+      float right
+      a
+        font-size 12px
+        margin-left 20px
+      a:not(:last-child)
+        margin-right 20px
+
+  .bottom 
+    position relative
+    background-color rgba(48, 48, 49, 0.95) 
+    &:before
+      content ""
+      display block
+      position absolute
+      width 100%
+      height (nav_h)px
+      background medium_gray 
+      z-index -1 
+
+    & > .container
+      position static
+
+    .logo,.navs
+      display block
+      float left
+
+    .logo
+      width 10%
+      z-index 102
+      img
+       margin-top 13px 
+
+    .navs
+      position relative
+      padding 0
+      width 90%
+      margin 0
+      text-align right
+      &:hover
+        .nav
+          & > a, & > .toggle-link span a, & > .toggle-link 
+            color fadded_white
+
+    .nav
+      display inline-block
+      vertical-align top
+      margin 0
+      //box-shadow 0 0 0 1px red
+      margin-left -2px
+      span
+        font-family font_avant_book
+
+      &:first-child a
+        text-indent 20px
+
+      &:not(:first-child) a
+        text-align center
+
+
+      & > a, & > .toggle-link
+        page_transition()
+        display inline-block
+        line-height (nav_h)px
+        max-width 120px
+        margin-right -5px
+      & > a
+        padding 0 20px 
+        &:hover
+          color white !important
+        
+      & > .toggle-link
+        padding 0 5px 
+        span
+          line-height 60px
+        &:hover
+          span a
+            color white !important
+
+      // subnav adjustment
+      &:nth-child(3)
+        .sub-navs
+          left -200%
+
+      &:nth-child(4)
+        .sub-navs
+          left -300%
+
+    .sub-navs
+      position relative
+      margin 0
+      width 650%
+      margin-left -50%
+      padding-left 50%
+      max-height 0
+      overflow-y hidden
+      opacity 0
+      margin-top -5px
+      mh_transition(0.5s,0.3s)
+
+      &:hover
+        max-height 500px
+        & ~ .toggle-link
+          color white !important
+
+      .row
+        margin 0
+        padding 30px 0
+
+      .columns
+        text-align left
+        &:first-child
+          margin-left 0 
+          text-indent 20px
+
+      .offset-by-four
+        li
+          margin-left -10px
+
+
+    .cta
+      box-shadow 0 0 0 1px white
+      height 40px
+      line-height 40px !important
+      margin-top 10px
+      color white !important
+      font-size 12px
+      page_transition()
+      &:hover
+        box-shadow 0 0 0 2px rgba(255,255,255,0.8)
+        
+    .nav-link:hover
+      color white
+
+    .toggle-link
+      overflow visible
+      & > span
+        display block
+        position relative
+        width 100%
+        text-align center
+        font-size 14px
+        &:before
+          position absolute
+          content ""
+          display block
+          width 90%
+          left 50%
+          margin-left -45%
+          height 1px
+          bottom 0px
+          z-index 101
+          border-bottom 4px solid transparent 
+
+        &:after
+          content ""
+          display inline-block
+          width 11px
+          height 6px
+          background-size 11px 6px
+          background-image arrow_down_icon_2x
+          margin-left 8px
+          opacity 0.5
+
+      &:hover
+        cursor pointer
+        span
+          color white
+          &:before
+            border-bottom 4px solid dark_gray
+            
+
+
+          &:after
+            background-image arrow_up_icon_2x
+            opacity 1
+        & > .sub-navs
+          max-height 500px
+          opacity 1
+
+
+        
+  .bottom .navs .sub-navs
+    li:hover
+      a:before
+        margin-left 0px
+        opacity 1
+
+    .icon
+      vertical-align top 
+
+      &:before
+        opacity 0
+        page_transition()
+        content ""
+        display inline-block
+        width 40px
+        height 40px
+        margin-top -5px
+        margin-bottom -10px
+        margin-left -40px
+
+    .video:before
+      nav_icon(22px,14px,video_icon_2x)
+
+    .voice:before
+      nav_icon(16px,22px,voice_icon_2x)
+
+    .messaging:before
+      nav_icon(22px,22px,messaging_icon_2x)
+
+    .screensharing:before
+      nav_icon(22px,22px,screensharing_icon_2x)
+    
+    .archiving:before
+      nav_icon(22px,22px,archiving_icon_2x)
+
+    .sdks:before
+      nav_icon(19px,21px,ios_android_icon_2x)
+
+    .multiparty:before
+      nav_icon(21px,16px,multiparty_icon_2x)
+
+    .ieplugin:before
+      nav_icon(22px,22px,ie_plugin_icon_2x)
+
+    .chat:before
+      nav_icon(22px,22px,chat_icon_2x)
+
+    .security:before
+      nav_icon(16px,22px,security_icon_2x)
+
+    .drivers:before
+      nav_icon(29px,22px,drivers_icon_2x)
+
+    .firewall:before
+      nav_icon(32px,16px,firewall_icon_2x)
+
+    .audiofallback:before
+      nav_icon(32px,12px,audio_fallback_icon_2x)
+
+
+
+
+

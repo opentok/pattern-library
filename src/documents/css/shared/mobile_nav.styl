@@ -1,0 +1,143 @@
+@import "shared_constants"
+
+mh_speed = 0.7s;
+dark_gray = #181818;  
+medium_gray = #303031;
+fadded_white = rgba(255,255,255,0.3);
+
+
+base_size = 12;
+
+// icons
+arrow_up_icon_2x = url(img_dir + "icons/nav-arrow_up@2x.png");
+arrow_down_icon_2x = url(img_dir + "icons/nav-arrow_down@2x.png"); 
+
+page_transition()
+  -o-transition all 0.5s ease-out
+  -webkit-transition all 0.5s ease-out
+  -moz-transition all 0.5s ease-out
+  -ms-transition all 0.5s ease-out 
+  -kthtml-transition all 0.5s ease-out 
+  transition all 0.5s ease-out
+
+mh_transition(t1,t2)
+  -o-transition max-height t1 ease-out, opacity t2 ease-out 
+  -webkit-transition max-height t1 ease-out, opacity t2 ease-out
+  -moz-transition max-height t1 ease-out, opacity t2 ease-out
+  -ms-transition max-height t1 ease-out, opacity t2 ease-out 
+  -kthtml-transition max-height t1 ease-out, opacity t2 ease-out 
+  transition max-height t1 ease-out, opacity t2 ease-out
+
+#content_bg 
+  overflow hidden !important
+  
+  .content-container
+    height 100%
+    overflow auto
+
+  .toolbar
+    position fixed
+    height 60px
+    background-color medium_gray 
+    top 0
+    left 0
+    right 0
+    z-index 101
+    line-height 70px
+    a
+      display inline-block
+      margin-left 20px
+    .logo
+      position relative
+      margin-left 50px
+      top 5px
+      
+#mobile-nav
+  .header,.navs,.footer
+    width 80%
+    margin 0 auto
+  ul
+    margin 0
+  a:hover
+    text-decoration none
+  a,span
+    display inline-block
+    font-family font_avant_book
+    color white
+    font-size (base_size+4)px
+    min-height 30px
+    line-height 30px
+    //box-shadow 0 0 0 1px pink
+
+  .cta
+    text-align center
+    box-shadow 0 0 0 1px white
+    height 40px
+    line-height 40px !important
+    margin-top 10px
+    color white !important
+    font-size (base_size+2)px
+    page_transition()
+    &:hover
+      box-shadow 0 0 0 2px rgba(255,255,255,0.8)
+
+  .open
+    .subnavs
+      opacity 1 
+      padding-top 10px
+      max-height 10000px 
+
+  .header
+    padding 30px 0 
+    border-bottom 1px solid fadded_white
+    a
+      display block
+      height 40px
+
+  .toggle-link
+    &:after
+      content ""
+      display inline-block
+      width 11px
+      height 6px
+      background-size 11px 6px
+      background-image arrow_down_icon_2x
+      margin-left 8px
+      opacity 0.5
+
+  .subnavs     
+    max-height 1px 
+    overflow hidden
+    opacity 0
+    mh_transition(0s,1s)
+
+    a
+      min-height 20px
+      line-height 20px
+      font-size (base_size+2)px
+      color rgba(255,255,255,0.6)
+      
+
+  .navs
+    padding 30px 0 20px 0 
+    border-bottom 1px solid fadded_white
+
+  .footer
+    padding 30px 0
+    img
+      display block
+      margin-bottom 20px
+    a,span
+      width 100%
+      font-size (base_size)px
+  .socials
+    width 150px
+    margin-top 20px
+    a
+      width 40px
+      height 30px
+      display inline-block
+      text-decoration none
+    img
+      width 26px
+      height 26px

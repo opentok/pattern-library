@@ -1,0 +1,42 @@
+@import "shared_constants"
+
+m=15;
+
+.hero
+  padding 50px 0
+  text-align center
+  margin 0
+  .underline
+    display inline-block
+    border-bottom 1px solid #cecece 
+    padding-bottom (m)px
+    margin-bottom (m*2)px
+
+  h1, h3 
+    margin 0 0 (m)px 0
+    &:last-child
+      margin-bottom 0px
+  a
+    margin (m)px (m)px 0 (m)px
+  p
+    margin-top -(m)px
+    margin-bottom (m)px
+
+
+ /* ------------------
+ *  desktop
+ * ------------------*/
+@media only screen and (min-width: 767px)
+  .hero-left,.hero-right
+    text-align left
+    a
+      margin-left 0px
+      margin-right (m*2)px
+
+/* ---------------
+ *  tablet, mobile
+ * ---------------*/
+@media only screen and (max-width: 767px) 
+  .hero
+    a
+      min-width 60%

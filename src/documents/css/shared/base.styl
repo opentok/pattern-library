@@ -1,0 +1,128 @@
+@import "shared_constants"
+
+/* override basic html properties */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin 0
+  padding 0
+  border 0
+  font-size 100%
+  font inherit
+  vertical-align baseline
+
+body
+  font-family font_muli
+  -webkit-font-smoothing antialiased
+  color state_gray 
+
+ol,ul,li
+  list-style none
+
+a
+  text-decoration none
+  &:hover
+    cursor pointer
+
+section
+  padding 40px 0
+
+
+p,span,li
+  font-family font_muli
+  line-height 28px
+
+p 
+  font-size 16px 
+
+input,textarea
+  border 1px solid #ccc
+  resize none
+  margin 5px
+  padding 12px 10px 
+  width 270px
+  font-size 15px
+  
+
+
+  //states css
+.secondary-nav-fixed
+  position fixed !important
+  width 100%
+  z-index 101
+  -webkit-overflow-scrolling touch
+
+.secondary-nav-fixed-mobile
+  position absolute !important
+  width: 100%;
+  top 60px
+  z-index 101
+
+#demo-overlay
+  top 100px !important
+  bottom 100px
+
+#content_bg
+  overflow-x hidden
+
+html,body
+  position relative
+
+/* ------------------
+ *  desktop
+ * ------------------*/
+@media only screen and (min-width: 767px) 
+  .secondary-nav-fixed
+    top 100px
+    & + section 
+      margin-top 40px
+
+
+  
+  .mobile-only
+    display none
+
+  #content_bg 
+    padding-top 100px
+
+  #demo-overlay
+    top 100px !important
+    
+
+/* ---------------
+ *  tablet
+ * ---------------*/
+@media only screen and (min-width: 480px) and (max-width: 767px)
+  .secondary-nav-fixed
+    top 60px
+    & + section 
+      margin-top 140px
+
+
+  .desktop-only
+    display none
+
+  #content_bg 
+    padding-top 60px
+    //.content-container
+
+  #demo-overlay
+    top 60px !important
+
+/* ---------------
+ * mobile only
+ * ---------------*/
+@media only screen and (max-width: 480px)
+  .secondary-nav-fixed
+    top 60px
+    & + section 
+      margin-top 140px
+
+  .desktop-only
+    display none
+
+  #content_bg 
+    padding-top 60px
+
+  #demo-overlay
+    top 60px !important
+
+

@@ -1,0 +1,63 @@
+@import "shared_constants"
+
+m=20;
+
+.section
+  padding 50px 0
+  text-align center
+  margin 0
+  .underline
+    display inline-block
+    border-bottom 1px solid state_gray 
+    padding-bottom (m)px
+    margin-bottom (m*2)px
+
+  .underline-white
+    display inline-block
+    border-bottom 1px solid rgba(255 255 255 0.5) 
+    padding-bottom (m)px
+    margin-bottom (m*2)px
+
+  h2, h3 
+    margin 0 0 (m)px 0
+    &:last-child
+      margin-bottom 0px
+  a
+    margin (m)px (m)px 0 (m)px
+  p.description
+    margin-top -(m)px
+    margin-bottom (m)px
+
+
+
+ /* ------------------
+ *  desktop
+ * ------------------*/
+@media only screen and (min-width: 767px)
+  .section-left, .section-right
+    text-align left
+    a
+      margin-left 0px
+      margin-right (m*2)px
+
+  .content
+    .row
+      &:not(:last-child)
+        margin-bottom (m+40)px
+
+/* ---------------
+ *  tablet, mobile
+ * ---------------*/
+@media only screen and (max-width: 767px) 
+  .section
+    a
+      min-width 60%
+
+  .content
+    .columns
+      margin-bottom (m+40)px
+    .row:last-child
+      .columns:last-child
+        margin-bottom 0px
+
+

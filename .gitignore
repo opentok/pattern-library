@@ -1,0 +1,19 @@
+node_modules
+
+# Debug log from npm
+npm-debug.log
+
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.swp
+*.swo
+
+

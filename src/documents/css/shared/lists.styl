@@ -1,0 +1,37 @@
+@import "shared_constants"
+
+.tb-list
+  li
+    position relative
+    font-family font_muli
+    text-align left
+    padding-left 50px
+    line-height 24px
+    margin-bottom 30px
+    &:before
+      content ""
+      display block
+      position absolute
+      left 0
+      top 0
+
+  .no-margin
+    margin-bottom 0px
+
+.tb-list-check-marks
+  li
+    &:before
+      background-image icon_check_mark_2x
+      width 31px 
+      height 31px
+      background-size 31px 31px
+      
+ /* ------------------
+ *  desktop
+ * ------------------*/
+@media only screen and (min-width: 767px)
+  .tb-list li
+    &:last-child
+      margin-bottom 0px
+
+

@@ -1,0 +1,96 @@
+
+tb_transition()
+  -o-transition all 0.5s ease-out
+  -webkit-transition all 0.5s ease-out
+  -moz-transition all 0.5s ease-out
+  -ms-transition all 0.5s ease-out 
+  -kthtml-transition all 0.5s ease-out 
+  transition all 0.5s ease-out
+
+//construct a button
+tb_btn_init(btn_color,border_color,hover_color, text_color)
+  background-color btn_color 
+  box-shadow 0 0 0 1px border_color 
+  color text_color 
+  border-radius 1px
+  &:hover
+    color text_color 
+    background-color hover_color 
+    box-shadow 0 0 0 2px border_color 
+
+//btn arrow animation
+btn_translate(x_offset)
+  -webkit-transform translate(x_offset,0px)
+  -moz-transform translate(x_offset,0px)
+  transform translate(x_offset,0px)
+
+btn_ctaarrow(icon_img,offset)
+  &:after
+    display inline-block
+    content ""
+    background-image icon_img 
+    background-size 9px 16px
+    width 9px
+    height 16px
+    vertical-align middle
+    margin-left 15px
+    tb_transition()
+  &:hover
+    &:after
+      background-size 9px 16px
+      btn_translate(offset)
+
+btn_custom(icon_img,offset,w,h)
+  &:after
+    display inline-block
+    content ""
+    background-image icon_img 
+    background-size (w)px (h)px
+    width (w)px
+    height (h)px
+    vertical-align middle
+    margin-left 15px
+    tb_transition()
+  &:hover
+    &:after
+      background-size (w)px (h)px
+      btn_translate(offset)
+
+btn_ctaarrow_left(icon_img,offset)
+  &:before
+    display inline-block
+    content ""
+    background-image icon_img 
+    background-size 9px 16px
+    width 9px
+    height 16px
+    vertical-align middle
+    margin-right 20px
+    tb_transition()
+  &:hover
+    &:before
+      background-size 9px 16px
+      btn_translate(-(offset))
+
+tb_icon(w,h,offset,img_icon)
+  &:before
+    content ""
+    position relative
+    top offset
+    display inline-block
+    width w 
+    height h
+    margin-right 20px
+    background-image img_icon 
+    background-size w h
+    background-repeat no-repeat
+
+pseudo_img(w,h,url)
+  content ""
+  display inline-block
+  width w
+  height h 
+  background-size w h
+  background-image url
+  
+
