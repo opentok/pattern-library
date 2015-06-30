@@ -6,9 +6,10 @@
 
 
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Muli:300,300italic" type='text/css'>
-  <link  rel="stylesheet" href="/css/pattern.css" />
-
+  <link  rel="stylesheet" href="/css/pattern.css" /><link  rel="stylesheet" href="/vendors/css/snap.css" />
+  
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="/vendors/js/snap.js"></script>
 </head>
 <body>
  <div id="main-nav" class="desktop-only">
@@ -292,6 +293,48 @@
 </div>
 
 <script>
+  var path = window.location.href;
+  $("#salesforce_cb").val(path);
+
+  //salesforce lead
+  var lead_path = window.location.pathname.split("/")[1] 
+  if(lead_path){
+    $("#salesforce_lead").val("Webform: "+lead_path);
+  }
+
+  var snapper = new Snap({
+  element: document.getElementById('content_bg'),
+  disable: 'right' 
+  });
+
+  function setSnapper(){
+    var w_width = $(window).width();
+    if(w_width < 767){
+      snapper.enable();
+    }else{
+      snapper.close();
+      snapper.disable();
+    }
+  }
+  setSnapper();
+  $(window).resize(function(){
+      setSnapper();
+  });
+
+  $("#sandwich").click(function() {
+    if( snapper.state().state=="left" ){
+        snapper.close();
+    } else {
+        snapper.open('left');
+    }
+  });
+
+  $("#mobile-nav .toggle-link").click(function(){
+      $("#mobile-nav .toggle-link").not(this).parent().removeClass("open");
+      $(this).parent().toggleClass("open");
+      });
+
+
   if($(".bizDevModalTrigger").length >0){
     $(".bizDevModalTrigger").click(function(){
         $("#bizDevModal").fadeIn('fast');

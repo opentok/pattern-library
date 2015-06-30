@@ -1306,7 +1306,7 @@ footer .hiring:after {
   width: 89px;
   height: 21px;
   background-size: 89px 21px;
-  background-image: url("img_diricons/footer-careers_banner@2x.png");
+  background-image: url("/img/icons/footer-careers_banner@2x.png");
   right: -202%;
   top: -3px;
   margin-right: -5px;
@@ -1343,7 +1343,7 @@ footer .divider:before {
   width: 50px;
   height: 30px;
   background-size: 21px 20px;
-  background-image: url("img_diricons/footer-div_logo@2x.png");
+  background-image: url("/img/icons/footer-div_logo@2x.png");
   background-position: center;
   background-color: #181818;
   background-repeat: no-repeat;
@@ -1584,7 +1584,7 @@ footer .logos span {
   width: 11px;
   height: 6px;
   background-size: 11px 6px;
-  background-image: url("img_diricons/nav-arrow_down@2x.png");
+  background-image: url("/img/icons/nav-arrow_down@2x.png");
   margin-left: 8px;
   opacity: 0.5;
 }
@@ -1598,7 +1598,7 @@ footer .logos span {
   border-bottom: 4px solid #181818;
 }
 #main-nav .bottom .toggle-link:hover span:after {
-  background-image: url("img_diricons/nav-arrow_up@2x.png");
+  background-image: url("/img/icons/nav-arrow_up@2x.png");
   opacity: 1;
 }
 #main-nav .bottom .toggle-link:hover > .sub-navs {
@@ -1629,79 +1629,79 @@ footer .logos span {
   margin-left: -40px;
 }
 #main-nav .bottom .navs .sub-navs .video:before {
-  background-image: url("img_diricons/nav-platform-video@2x.png");
+  background-image: url("/img/icons/nav-platform-video@2x.png");
   background-repeat: no-repeat;
   background-size: 22px 14px;
   background-position: center left;
 }
 #main-nav .bottom .navs .sub-navs .voice:before {
-  background-image: url("img_diricons/nav-platform-voice@2x.png");
+  background-image: url("/img/icons/nav-platform-voice@2x.png");
   background-repeat: no-repeat;
   background-size: 16px 22px;
   background-position: center left;
 }
 #main-nav .bottom .navs .sub-navs .messaging:before {
-  background-image: url("img_diricons/nav-platform-messaging@2x.png");
+  background-image: url("/img/icons/nav-platform-messaging@2x.png");
   background-repeat: no-repeat;
   background-size: 22px 22px;
   background-position: center left;
 }
 #main-nav .bottom .navs .sub-navs .screensharing:before {
-  background-image: url("img_diricons/nav-platform-screensharing@2x.png");
+  background-image: url("/img/icons/nav-platform-screensharing@2x.png");
   background-repeat: no-repeat;
   background-size: 22px 22px;
   background-position: center left;
 }
 #main-nav .bottom .navs .sub-navs .archiving:before {
-  background-image: url("img_diricons/nav-platform-archiving@2x.png");
+  background-image: url("/img/icons/nav-platform-archiving@2x.png");
   background-repeat: no-repeat;
   background-size: 22px 22px;
   background-position: center left;
 }
 #main-nav .bottom .navs .sub-navs .sdks:before {
-  background-image: url("img_diricons/nav-platform-ios_android@2x.png");
+  background-image: url("/img/icons/nav-platform-ios_android@2x.png");
   background-repeat: no-repeat;
   background-size: 19px 21px;
   background-position: center left;
 }
 #main-nav .bottom .navs .sub-navs .multiparty:before {
-  background-image: url("img_diricons/nav-platform-multiparty@2x.png");
+  background-image: url("/img/icons/nav-platform-multiparty@2x.png");
   background-repeat: no-repeat;
   background-size: 21px 16px;
   background-position: center left;
 }
 #main-nav .bottom .navs .sub-navs .ieplugin:before {
-  background-image: url("img_diricons/nav-platform-ie_plugin@2x.png");
+  background-image: url("/img/icons/nav-platform-ie_plugin@2x.png");
   background-repeat: no-repeat;
   background-size: 22px 22px;
   background-position: center left;
 }
 #main-nav .bottom .navs .sub-navs .chat:before {
-  background-image: url("img_diricons/nav-platform-text_chat@2x.png");
+  background-image: url("/img/icons/nav-platform-text_chat@2x.png");
   background-repeat: no-repeat;
   background-size: 22px 22px;
   background-position: center left;
 }
 #main-nav .bottom .navs .sub-navs .security:before {
-  background-image: url("img_diricons/nav-platform-security@2x.png");
+  background-image: url("/img/icons/nav-platform-security@2x.png");
   background-repeat: no-repeat;
   background-size: 16px 22px;
   background-position: center left;
 }
 #main-nav .bottom .navs .sub-navs .drivers:before {
-  background-image: url("img_diricons/nav-platform-audio_video_drivers@2x.png");
+  background-image: url("/img/icons/nav-platform-audio_video_drivers@2x.png");
   background-repeat: no-repeat;
   background-size: 29px 22px;
   background-position: center left;
 }
 #main-nav .bottom .navs .sub-navs .firewall:before {
-  background-image: url("img_diricons/nav-platform-firewall_traversal@2x.png");
+  background-image: url("/img/icons/nav-platform-firewall_traversal@2x.png");
   background-repeat: no-repeat;
   background-size: 32px 16px;
   background-position: center left;
 }
 #main-nav .bottom .navs .sub-navs .audiofallback:before {
-  background-image: url("img_diricons/nav-platform-audio_fallback@2x.png");
+  background-image: url("/img/icons/nav-platform-audio_fallback@2x.png");
   background-repeat: no-repeat;
   background-size: 32px 12px;
   background-position: center left;
@@ -1790,7 +1790,7 @@ footer .logos span {
   width: 11px;
   height: 6px;
   background-size: 11px 6px;
-  background-image: url("img_diricons/nav-arrow_down@2x.png");
+  background-image: url("/img/icons/nav-arrow_down@2x.png");
   margin-left: 8px;
   opacity: 0.5;
 }

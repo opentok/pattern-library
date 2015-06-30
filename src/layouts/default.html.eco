@@ -6,9 +6,10 @@
 
 
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Muli:300,300italic" type='text/css'>
-  <%- @getBlock('styles').add(["/css/pattern.css",@document.style]).toHTML() %>
-
+  <%- @getBlock('styles').add(["/css/pattern.css","/vendors/css/snap.css", @document.style]).toHTML() %>
+  
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="/vendors/js/snap.js"></script>
 </head>
 <body>
  <%- @content %>
